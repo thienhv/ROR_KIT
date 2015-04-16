@@ -1,28 +1,27 @@
-== README
+Step 1:
+	Add gem 'grape'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+	bundle install
 
-Things you may want to cover:
+Step 2:
+	Add
 
-* Ruby version
+		config.paths.add 'app/api', glob: '**/*.rb'
+    	config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
 
-* System dependencies
+    to config/application.rb
 
-* Configuration
+Step 3:
+	Create folder app/api
 
-* Database creation
+	Create folder app/api/v1
 
-* Database initialization
+			Create file app/api/v1/user_api.rd
 
-* How to run the test suite
+	Create file root_v1.rb in app/api
 
-* Services (job queues, cache servers, search engines, etc.)
+Step 4:
 
-* Deployment instructions
+	Change routes.rb
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Ex: link for v1: /api/v1/users
