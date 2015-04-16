@@ -18,3 +18,5 @@
 /vendor/
 
 Gemfile.lock
+
+db/schema.rb
